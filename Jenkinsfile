@@ -79,7 +79,7 @@ pipeline {
                     if (isUnix()) {
                         sh '''
                             # Activate virtual environment and run code quality checks
-                            source venv/bin/activate
+                            source .venv/bin/activate
                             python -m py_compile app.py
                             python -c "import ast; ast.parse(open('app.py').read())"
                         '''
